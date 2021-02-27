@@ -1,0 +1,30 @@
+.empty-wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 20px;
+    background: #fff;
+    &__title {
+        margin: 0;
+        padding-bottom: 8px;
+        font-size: 20px;
+        line-height: 1.2;
+        color: #888;
+        font-weight: 400;
+    }
+    &__desc {
+        padding-bottom: 40px;
+        color: #a8a8a8;
+        font-size: 15px;
+        line-height: 1.33;
+        margin: 0;
+        max-width: 320px;
+    }
+}

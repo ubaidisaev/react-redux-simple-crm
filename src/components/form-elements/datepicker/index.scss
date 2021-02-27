@@ -1,0 +1,122 @@
+.react-datepicker {
+  &-wrapper {
+    width: 100%;
+    @media (max-width: 640px) {
+      display: block;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  }
+  width: 100%;
+  border: none;
+  background: none;
+  padding-top: 15px;
+  //   padding-bottom: 50px;
+  &__triangle {
+    display: none;
+  }
+  &-popper {
+    z-index: 5;
+    box-shadow: 0 2px 8px 0 rgb(34 34 34 / 20%);
+    background-color: #fff;
+    border-radius: 12px;
+  }
+  &__header {
+    background: transparent;
+    border-bottom: none;
+    padding-top: 5px;
+  }
+  &__current-month {
+    font: 14px/20px "Roboto";
+    font-weight: 500;
+    position: relative;
+    top: 2px;
+    color: #222;
+  }
+  &__day-names {
+    padding-top: 10px;
+  }
+  &__day-name {
+    color: #a8a8a8;
+    font-size: 12px;
+    width: 2rem;
+    line-height: 2rem;
+  }
+  &__day {
+    color: #222;
+    outline: none;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2.2rem;
+    font-size: 14px;
+    border-radius: 50%;
+    transition: background 0.4s ease, color 0.4s ease;
+    &:hover {
+      background: #f0f0f0;
+      color: #222;
+      border-radius: 50%;
+    }
+  }
+
+  &__day--keyboard-selected,
+  &__day--selected {
+    color: #fff;
+    background: #ff6a5f;
+    border-radius: 50%;
+    &:hover {
+      color: #fff;
+      background: #ff6a5f;
+    }
+  }
+  &__navigation {
+    outline: none;
+    // border: none;
+    // color: #a8a8a8;
+  }
+  &__custom-input-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__custom-input {
+    line-height: 36px;
+    padding: 0 36px;
+    transition: background 0.4s ease;
+    cursor: pointer;
+    font-size: 15px;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #222;
+    border: none;
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    &:hover {
+      background-color: #0000000f;
+    }
+  }
+  &__custom-input-clear-icon {
+    width: 20px;
+    position: absolute;
+    right: 5px;
+    color: #a8a8a8;
+    &:hover {
+      color: #555;
+    }
+  }
+  &__custom-input-calendar-icon {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    position: absolute;
+    left: 5px;
+    color: #a8a8a8;
+  }
+}
+
+.btn-clear-date {
+  display: block;
+  padding: 15px 20px;
+  width: 100%;
+  text-align: right;
+}

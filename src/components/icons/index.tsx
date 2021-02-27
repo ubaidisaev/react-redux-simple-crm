@@ -1,0 +1,13 @@
+export { PhoneIcon } from "./PhoneIcon";
+export { CloseIcon } from "./CloseIcon";
+export { MailIcon } from "./MailIcon";
+export { BDayIcon } from "./BDayIcon";
+export { MapIcon } from "./MapIcon";
+export { WebIcon } from "./WebIcon";
+export { NoteIcon } from "./NoteIcon";
+export { RemoveIcon } from "./RemoveIcon";
+export { SearchIcon } from "./SearchIcon";
+export { CameraIcon } from "./CameraIcon";
+export { UsersIcon } from "./UsersIcon";
+export { HomeIcon } from "./HomeIcon";
+export { BadgeIcon } from "./BadgeIcon";

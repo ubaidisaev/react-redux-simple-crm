@@ -1,0 +1,23 @@
+.modal-confirm {
+  &__title {
+    font: 16px/24px;
+    color: #222;
+    padding-bottom: 8px;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+  &__text {
+    font: 15px/20px;
+    color: #888;
+  }
+  &__controls {
+    padding: 16px 0 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__control {
+    margin-left: 12px;
+  }
+}

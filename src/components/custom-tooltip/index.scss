@@ -1,0 +1,20 @@
+.custom-tooltip {
+  position: relative;
+  &__label {
+    font-size: 14px;
+    line-height: 21px;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  &__tooltip {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: block;
+    min-width: 100%;
+    box-shadow: 0 2px 8px 0 rgb(34 34 34 / 20%);
+    &_hidden {
+      display: none;
+    }
+  }
+}

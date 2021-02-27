@@ -1,0 +1,128 @@
+@import "./variables.scss";
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+h1,
+h2 {
+  font-family: "Roboto", sans-serif;
+  color: $normal-black;
+}
+h1 {
+  font-size: 24px;
+}
+h2 {
+  font-size: 21px;
+}
+
+p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: $normal-black;
+}
+
+.title {
+  font-family: "Roboto", sans-serif;
+  color: $normal-black;
+  &_h1 {
+    font-size: 24px;
+    line-height: 1.33;
+  }
+  &_h2 {
+    font-size: 22px;
+    line-height: 1.27;
+  }
+  &_h3 {
+    font-size: 20px;
+  }
+}
+
+
+.header-page-nav {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.container {
+  &_modal {
+    max-width: 900px;
+  }
+  &_client-add {
+    max-width: 445px;
+    @include media($mb) {
+      max-width: 100%;
+    }
+  }
+}
+
+.form {
+  &__controls {
+    padding-top: 17px;
+  }
+}
+
+
+
+
+mark {
+  background: #3361cc;
+  border-radius: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
+  color: #fff;
+}
+
+// // grid
+[class*="grid-"],
+[class*="grid_"],
+[class~="grid"] {
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -0.5rem;
+}
+
+[class*="grid-"][class*="-right"] {
+  justify-content: flex-end;
+  align-self: flex-end;
+  margin-left: auto;
+}
+
+[class*="grid-"][class*="-middle"] {
+  align-items: center;
+}
+
+[class*="grid-"] > [class*="col-3"],
+[class*="grid_"] > [class*="col-3"],
+[class~="grid"] > [class*="col-3"] {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+[class*="grid-"] > [class*="col-9"],
+[class*="grid_"] > [class*="col-9"],
+[class~="grid"] > [class*="col-9"] {
+  flex-basis: 75%;
+  max-width: 75%;
+}
+
+[class*="grid-1"] > [class*="col-"],
+[class*="grid-1"] > [class*="col_"],
+[class*="grid-1"] > [class~="col"] {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.mr-10 {
+  margin-right: 10px;
+}
+
+.fw {
+  width: 100%;
+}

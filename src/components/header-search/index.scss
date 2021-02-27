@@ -1,0 +1,29 @@
+.header-components-search {
+  &_active {
+    @media (max-width: 640px) {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 5px 15px;
+      background: #fff;
+    }
+    .header-components-search__inner {
+      @media (max-width: 640px) {
+        width: 100%;
+      }
+    }
+  }
+  .header-components-search__inner {
+    @media (max-width: 640px) {
+      transition: none;
+    }
+  }
+  &__input {
+    @media (max-width: 640px) {
+      transition: none;
+    }
+  }
+}

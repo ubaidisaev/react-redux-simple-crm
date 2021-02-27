@@ -1,0 +1,105 @@
+.client-detail {
+  width: 432px;
+  height: 100%;
+  overflow: auto;
+  padding: 80px 48px 50px;
+  font: 16px/24px "Roboto";
+  background: #f6f6f6;
+  box-shadow: -1px 0 0 #eaeaea;
+  position: absolute;
+  top: 0;
+  right: 0;
+  @media (max-width: 640px) {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 70px 16px 20px;
+    top: 0;
+    z-index: 5;
+    box-shadow: none;
+  }
+  &__container {
+  }
+
+  &__controls {
+    display: flex;
+    position: absolute;
+    right: 28px;
+    top: 28px;
+    align-items: center;
+    > * {
+      width: 28px;
+      height: 28px;
+      margin-left: 12px;
+      color: #a8a8a8;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+  &__main-info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  &__name {
+    font: 24px/32px "Roboto", sans-serif;
+    padding: 20px 0 8px;
+    color: #222;
+    text-align: center;
+    width: 100%;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+  }
+  &__company {
+    color: #888;
+    padding-bottom: 23px;
+    word-wrap: break-word;
+    hyphens: auto;
+    max-width: 100%;
+  }
+}
+
+.client-detail-box-enter {
+  transform: translateX(432px);
+}
+
+@media (max-width: 640px) {
+  .client-detail-box-enter {
+    transform: translateX(100%);
+  }
+}
+
+.client-detail-box-enter-active {
+  transition: transform 0.45s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+.client-detail-box-enter-active,
+.client-detail-box-exit {
+  transform: translateX(0);
+}
+
+.client-detail-box-exit-active {
+  transform: translateX(432px);
+  transition: transform 0.45s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+
+@media (max-width: 640px) {
+  .client-detail-box-exit-active {
+    transform: translateX(100%);
+  }
+}
+
+

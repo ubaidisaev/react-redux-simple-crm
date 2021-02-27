@@ -1,0 +1,25 @@
+.add-btn {
+  width: 24px;
+  height: 24px;
+  font-size: 12px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  background: #222;
+  transition: background 0.4s ease, color 0.4s ease;
+  &_sm {
+    width: 24px;
+    height: 24px;
+    font-size: 10px;
+    line-height: 26px;
+  }
+  &_xl {
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    font-size: 21px;
+  }
+}

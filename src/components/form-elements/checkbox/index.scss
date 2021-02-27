@@ -1,0 +1,35 @@
+.checkbox {
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #d4d4d4;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  &_checked {
+    &:after {
+      content: "";
+      width: 10px;
+      height: 10px;
+      background-color: #d4d4d4;
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      border-radius: 50%;
+      transition: all 0.2s ease;
+    }
+  }
+  &:hover {
+    & {
+      border-color: #a8a8a8;
+    }
+    &:after {
+      background-color: #a8a8a8;
+    }
+  }
+
+  &__input {
+    display: none;
+  }
+}

@@ -1,0 +1,106 @@
+.table {
+  background: #fff;
+  padding-bottom: 30px;
+  &__header {
+    display: flex;
+    padding: 40px 185px 0;
+    border-right: 8px solid transparent;
+    @media (max-width: 1600px) {
+      padding: 40px 52px 0;
+    }
+    @media (max-width: 1024px) {
+      padding: 20px 24px 0;
+    }
+    @media (max-width: 768px) {
+      display: none;
+    }
+
+    &-cell {
+      font-size: 13px;
+      line-height: 20px;
+      color: #a8a8a8;
+      padding: 10px 8px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      &_name {
+        flex-grow: 1;
+      }
+      &_company {
+        flex-basis: 150px;
+        width: 150px;
+      }
+      &_phone {
+        flex-basis: 130px;
+        width: 130px;
+      }
+      &_mail {
+        flex-basis: 350px;
+        width: 350px;
+      }
+      &_date {
+        flex-basis: 130px;
+        width: 130px;
+      }
+      &_context-menu {
+        flex-basis: 44px;
+        width: 44px;
+      }
+    }
+  }
+  &__row-wrap {
+    padding: 0 185px;
+    @media (max-width: 1600px) {
+      padding: 0 52px;
+    }
+    @media (max-width: 1024px) {
+      padding: 0 24px;
+    }
+    &.active {
+      .table__row {
+        border-color: #ffeceb;
+        background: #ffeceb;
+      }
+    }
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-top: 1px solid #eaeaea;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #f6f6f6;
+      background: #f6f6f6;
+      transition: background 0.3s ease, border 0.3s ease;
+    }
+  }
+  &__cell {
+    &_name {
+      flex-grow: 1;
+    }
+    &_company {
+      flex-basis: 150px;
+      width: 150px;
+    }
+    &_phone {
+      flex-basis: 130px;
+      width: 130px;
+    }
+    &_mail {
+      flex-basis: 350px;
+      width: 350px;
+    }
+    &_date {
+      flex-basis: 130px;
+      width: 130px;
+    }
+    &_context-menu {
+      flex-basis: 44px;
+      width: 44px;
+    }
+  }
+}

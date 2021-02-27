@@ -1,0 +1,23 @@
+.language-switcher {
+  position: relative;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  &__divider {
+    width: 2px;
+    height: 15px;
+    background-color: #a8a8a8;
+    border-radius: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+  &__lang {
+    cursor: pointer;
+    border-radius: 2px;
+    padding: 2px;
+    &_active {
+      background-color: #3361cc;
+      color: #fff;
+    }
+  }
+}

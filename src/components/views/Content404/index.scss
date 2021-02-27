@@ -1,0 +1,17 @@
+.not-found {
+    height: 100%;
+    min-width: 100%;
+    padding: 113px 20px 0;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top-left-radius: 20px;
+        background: #fff;
+        text-align: center;
+    }
+    &__btn-wrap {
+        margin-top: 24px;
+    }
+}

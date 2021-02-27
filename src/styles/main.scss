@@ -1,0 +1,222 @@
+@import "./variables.scss";
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+.ReactModal__Body--open {
+  .content-page,
+  #root {
+    @include media($md) {
+      overflow: hidden;
+      pointer-events: none;
+      .user-notification-wrapper {
+        pointer-events: auto;
+      }
+    }
+  }
+}
+
+html {
+  font-size: 14px;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+  font-weight: normal;
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    background: $normal-silver;
+    height: 12px;
+    border-radius: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: $dark-silver;
+    border-radius: 8px;
+    height: 12px;
+  }
+  &.sb-show-main {
+    overflow: auto;
+  }
+}
+
+h1,
+h2,
+h3,
+th {
+  font-weight: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1350px;
+}
+
+.content-page {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 88px);
+  background: $white;
+
+  &:not(.content-page_stages) {
+    height: calc(100vh - 68px);
+    @include media($md) {
+      border: none;
+      height: 100%;
+    }
+  }
+
+  @include media($md) {
+    //height: calc(var(--vh, 1vh) * 100 - 110px)
+    height: 100%;
+    border-radius: 0;
+    border: none;
+  }
+}
+
+main {
+  height: 100%;
+  @include media($md, $min) {
+    padding-left: 68px;
+    padding-top: 68px;
+  }
+  @include media($md) {
+    padding-left: 0;
+    padding-top: 60px;
+    padding-bottom: 53px;
+  }
+  @include media($mb) {
+    padding-top: 49px;
+  }
+}
+
+.header-page {
+  // background: #fff;
+  z-index: 3;
+  padding: 0 20px 0 32px;
+  left: 69px;
+  height: 68px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid $normal-silver;
+  @include media($md) {
+    height: 60px;
+    left: 0;
+    padding-left: 16px;
+    border-bottom: 1px solid $normal-silver;
+  }
+  @include media($mb) {
+    height: 49px;
+    padding: 0 8px;
+  }
+  &__title-wrap {
+    overflow: hidden;
+  }
+  &__title {
+    margin: 0;
+  }
+  &__nav {
+    flex-shrink: 0;
+  }
+  &-back {
+    &__icon {
+      font-size: 18px;
+      padding: 5px;
+      margin-right: 15px;
+      display: inline-block;
+      transition: transform 0.4s ease;
+      cursor: pointer;
+    }
+    &__title {
+      @include media($md) {
+        font: 16px/24px "Roboto";
+        font-weight: 500;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        padding-top: 5px;
+      }
+    }
+  }
+  &-nav {
+    &__col {
+      padding: 0 4px;
+    }
+    &__icon-wrap {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &__icon-btn {
+      text-decoration: none;
+      font-size: 20px;
+      color: $light-grey;
+      cursor: pointer;
+      border-radius: 8px;
+      background: transparent;
+      transition: background 0.4s ease, color 0.4s ease;
+      &:hover {
+        background: $almost-white;
+        color: $dark-grey;
+      }
+    }
+  }
+}
+
+.hide-lg {
+  @include media($lg) {
+    display: none;
+  }
+}
+
+.hide-md {
+  @include media($md) {
+    display: none;
+  }
+}
+
+.hide-sm {
+  @include media($sm) {
+    display: none;
+  }
+}
+
+.hide-mb {
+  @include media($mb) {
+    display: none;
+  }
+}
+
+.show-md {
+  display: none;
+  @include media($md) {
+    display: block;
+  }
+}
+
+.show-mb {
+  display: none;
+  @include media($mb) {
+    display: block;
+  }
+}

@@ -1,0 +1,16 @@
+.add-task-modal {
+    min-width: 500px;
+    @media (max-width: 640px) {
+      min-width: 100%;
+      width: 100%;
+    }
+  &__title-textarea {
+    color: #222;
+    border: none;
+    resize: none;
+    width: 100%;
+    font: 18px/28px "Roboto";
+    padding: 5px;
+    caret-color: #222;
+  }
+}

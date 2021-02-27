@@ -1,0 +1,54 @@
+.task-item {
+  padding: 10px 12px 10px 44px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.4s ease;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+//   content-visibility: auto;
+//   contain-intrinsic-size: 44px;
+  height: 44px;
+  &_has-footer {
+    // contain-intrinsic-size: 64px;
+    height: 64px;
+  }
+  &:hover {
+    background: #f6f6f6;
+  }
+  &__title {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #222;
+    overflow: hidden;
+    flex-grow: 1;
+    flex-basis: 100%;
+    padding-right: 45px;
+    display: flex;
+    align-items: center;
+    & span {
+      white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+  }
+  &__detail {
+    font: 14px/1.43;
+    color: #888;
+  }
+  &__detail-col {
+      flex-basis: 100%;
+      width: 100%;
+  }
+  &__detail-calendar-icon {
+      width: 17px;
+      vertical-align: bottom;
+      margin-right: 5px;
+  }
+  &__checkbox {
+    position: absolute;
+    top: 12px;
+    left: 10px;
+  }
+}

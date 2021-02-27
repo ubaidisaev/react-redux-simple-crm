@@ -1,0 +1,79 @@
+/* UI - colors */
+
+$dark-black: #111;
+$normal-black: #222;
+$light-black: #333;
+
+$dark-grey: #555;
+$normal-grey: #888;
+$light-grey: #a8a8a8;
+
+$dark-silver: #d4d4d4;
+$normal-silver: #eaeaea;
+$light-silver: #f0f0f0;
+
+$white: #FFFFFF;
+$almost-white: #f6f6f6;
+
+$mojo: #c74b40;
+$chestnut-rose: #d26f66;
+$bittersweet: #ff6a5f;
+$mona: #ffa199;
+$peach-schnapps: #ffd7d2;
+$fair-pink: #ffeceb;
+
+$old-gold: #cea43b;
+$goldenrod: #fbce5d;
+$cream-brulee: #ffe19a;
+$oasis: #fdeeca;
+$varden: #fff6df;
+
+$jelly: #2487a4;
+$fountain-blue: #49a1ba;
+$half-baked: #88becf;
+$jagged-ice: #bedee7;
+$iceberg: #deeff4;
+
+$de-york: #76c684;
+$olivine: #95c062;
+
+
+
+/*** Responsive system ***/
+
+$xlg: 1600px;
+$mlg: 1400px;
+$lg: 1280px;
+$md: 1024px;
+$sm: 768px;
+$mb: 640px;
+$xs: 420px;
+$xxs: 340px;
+
+$min: min-width;
+$max: max-width;
+$pt: portrait;
+$ls: landscape;
+$orientation: orientation;
+$flex: flex;
+
+$size: (lg: $lg, md: $md, sm: $sm, mb: $mb, xs: $xs);
+$direction: (min: $min, max: $max);
+$type: (pt: $pt, ls: $ls);
+$display: (flex: $flex);
+
+@mixin media($size, $direction: $max) {
+	@media ($direction: $size) {
+		@content; } }
+
+@mixin orientation($type: $ls) {
+	@media ($orientation: $type) {
+		@content; } }
+
+@mixin position($display: $flex, $ai: center, $jc: center) {
+	display: $display;
+	align-items: $ai;
+	justify-content: $jc; }
+
+
+

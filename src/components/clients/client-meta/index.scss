@@ -1,0 +1,60 @@
+.client {
+  &__meta-item {
+    padding: 6px 0;
+    color: #222;
+  }
+  &__meta-line {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.meta-item {
+  &__icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    flex-shrink: 0;
+  }
+  &__tooltip {
+    position: absolute;
+    left: inherit;
+    background: #fff;
+    padding: 16px 36px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px 0 rgb(34 34 34 / 20%);
+    z-index: 3;
+    transform: translateY(1px);
+    cursor: default;
+    max-width: 320px;
+    &-close {
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        padding: 10px;
+        top: 0;
+        right: 0;
+        color: #a8a8a8;
+        cursor: pointer;
+        font-size: 10px;
+        transition: color .4s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &-content span {
+        display: block;
+        line-height: 28px;
+        padding-bottom: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &:last-child {
+          padding-bottom: 0;
+        }
+    }
+  }
+}

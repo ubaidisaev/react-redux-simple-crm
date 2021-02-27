@@ -1,0 +1,123 @@
+.react-modal {
+  &__native-close {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100vw;
+    background: rgba(17, 17, 17, 0.6);
+    z-index: 10;
+    padding: 30px 15px;
+    min-width: 700px;
+    overflow: auto;
+    @media (max-width: 640px) {
+      min-width: 100%;
+      padding: 0;
+      background: rgba(0, 0, 0, 0.8);
+    }
+  }
+  &__window {
+    background: #fff;
+    border-radius: 16px;
+    outline: none;
+    padding: 32px 40px;
+    min-width: 300px;
+    max-width: 90%;
+    box-shadow: 0 0 0 1px rgb(15 15 15 / 5%), 0 5px 10px rgb(15 15 15 / 10%),
+      0 15px 40px rgb(15 15 15 / 20%);
+    position: relative;
+    left: 0;
+    margin: auto;
+    @media (max-width: 640px) {
+      min-width: 100%;
+      max-width: 100%;
+      border-radius: 0;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+      padding: 0;
+    }
+    &_small-indent {
+      padding: 20px;
+    }
+    &_client-modal {
+      width: 540px;
+    }
+    &_can-save {
+      padding-bottom: 72px;
+      @media (max-width: 640px) {
+        padding-bottom: 0;
+      }
+    }
+  }
+  &__header {
+    padding-bottom: 12px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    @media (max-width: 640px) {
+      padding: 12px 16px;
+      border-bottom: 1px solid #eaeaea;
+    }
+  }
+  &__title {
+    margin: 0;
+    font-size: 20px;
+    line-height: 24px;
+    color: #222;
+    border-radius: 8px;
+    display: inline-block;
+  }
+  &__save {
+    padding: 22px 55px;
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: 640px) {
+      padding: 10px 15px;
+      justify-content: space-between;
+    }
+    &-wrap {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+  &__content {
+    @media (max-width: 640px) {
+      padding: 16px;
+      padding-bottom: 50px;
+    }
+  }
+}
+
+.ReactModal {
+  &__Content {
+    opacity: 0;
+    transform: translate3d(0, 15px, 0);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      left 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    &--after-open {
+      transform: none;
+      opacity: 1;
+    }
+    &--before-close {
+      opacity: 0;
+      transform: translate3d(0, 10px, 0);
+    }
+  }
+}
