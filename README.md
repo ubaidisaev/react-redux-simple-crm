@@ -1,6 +1,5 @@
-# Это проект что бы показать мой текущий опыт и практики, которые использую в своей работе. В данный момент проект  не является законченным.
+## Это проект что бы показать мой текущий опыт и практики, которые использую в своей работе. В данный момент проект  не является законченным. [Demo](https://ubaid-react-redux-simple-crm.web.app)
 
-## Simple Tasks and Clients management app  -  [Demo](https://ubaid-react-redux-simple-crm.web.app)
 
 Using technology:
 
